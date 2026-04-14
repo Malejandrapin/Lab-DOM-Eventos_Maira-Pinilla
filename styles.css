@@ -1,7 +1,6 @@
 :root {
       --background: #F5F2F2;
       --negro: #000000;
-      --navbar: #5f0dadd7;
       --blanco: #ffffff;
       --badge: #e74c3c;
       --btnAgregar: #27ae60;
@@ -17,8 +16,9 @@ body {
 }
 
 .navbar {
-      background-color: var(--navbar);
+      background-image: radial-gradient(at 99.18895578996047% 69.72010646437656%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 1) 0%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 0) 100%), radial-gradient(at 63.65117545495587% 58.189574637236%, hsla(197.95918367346937, 65.33333333333333%, 44.11764705882353%, 1) 0%, hsla(197.95918367346937, 65.33333333333333%, 44.11764705882353%, 0) 100%), radial-gradient(at 21.91942676285301% 38.29319981343797%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 1) 0%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 0) 100%), radial-gradient(at 62.399969429307234% 61.306099438772456%, hsla(197.95918367346937, 65.33333333333333%, 44.11764705882353%, 1) 0%, hsla(197.95918367346937, 65.33333333333333%, 44.11764705882353%, 0) 100%), radial-gradient(at 79.808946769041% 90.22749386625651%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 1) 0%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 0) 100%), radial-gradient(at 99.56498533702782% 33.59487367395724%, hsla(197.95918367346937, 65.33333333333333%, 44.11764705882353%, 1) 0%, hsla(197.95918367346937, 65.33333333333333%, 44.11764705882353%, 0) 100%), radial-gradient(at 41.21712324289606% 30.350529259064984%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 1) 0%, hsla(290.13698630136986, 65.17857142857143%, 43.92156862745098%, 0) 100%);
       color: var(--blanco);
+      font-weight: 600;
       padding: 10px 25px;
       display: flex;
       justify-content: space-between;
@@ -61,11 +61,11 @@ body {
 }
 
 .tarjeta-producto {
-      background-color: var(--background);
+      background-color: var(--blanco);
       border-radius: 8px;
       /* ocultar contenido que se sobresalga */
       overflow: hidden;
-      box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       text-align: center;
       padding-bottom: 16px;
       display: flex;
@@ -93,6 +93,57 @@ body {
 .btn-agregar:hover {
       background-color: var(--btnAgregarHover);
 }
-.seccion-carrito{
-      
+
+.seccion-carrito {
+      background: var(--blanco);
+      padding: 24px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      height: fit-content;
+}
+.header h2{
+      font-size: 25px;
+      text-align: center;
+}
+
+#listaCarrito {
+      list-style: none;
+      padding: 0;
+      margin-top: 16px;
+}
+
+.item-carrito {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding: 8px 0;
+}
+.contenedor-carrito{
+      justify-content: center;
+      align-items: center;
+      text-align: right;
+}
+
+#btn-vaciar {
+      width: 100%;
+      background-color: transparent;
+      color: var(--badge);
+      border: 2px solid var(--badge);
+      padding: 8px;
+      margin-top: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      font-weight: bold;
+}
+
+#btn-vaciar:hover {
+      background-color: var(--badge);
+      color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+      .contenedor-principal {
+            grid-template-columns: 1fr;
+      }
 }

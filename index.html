@@ -7,12 +7,13 @@
     <title>MostacillaArt - Tienda de Pulseras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-          <!-- Bootstrap Icons -->
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- navbar de la tienda -->
     <nav class="navbar">
         <h1>Mostacilla Art</h1>
         <div class="contenedor-carrito-icono">
@@ -20,20 +21,23 @@
             <span id="badge">0</span>
         </div>
     </nav>
+    <!-- contenedor donde coloque las card de los 4 productos -->
     <main class="contenedor-principal">
         <section class="grid-productos">
             <article class="tarjeta-producto">
                 <img src="./imagenes/Smile.png" alt="Pulsera Smile">
                 <h3>Pulsera Smile Amarilla</h3>
                 <p>Precio: <strong>$20.000</strong> </p>
-                <button class="btn-agregar" data-nombre="Pulsera Smile" data-precio="20000"><i class="bi bi-cart-plus"></i> Agregar al Carrito</button>
+                <button class="btn-agregar" data-nombre="Pulsera Smile" data-precio="20000"><i
+                        class="bi bi-cart-plus"></i> Agregar al Carrito</button>
             </article>
 
             <article class="tarjeta-producto">
                 <img src="./imagenes/EquipoNombre.png" alt="Pulsera Equipo Nombre">
                 <h3>Pulsera Escudo y Nombre</h3>
                 <p>Precio: <strong>$22.000</strong> </p>
-                <button class="btn-agregar" data-nombre="Pulsera Equipo y Nombre" data-precio="22000"><i class="bi bi-cart-plus"></i> Agregar al
+                <button class="btn-agregar" data-nombre="Pulsera Equipo y Nombre" data-precio="22000"><i
+                        class="bi bi-cart-plus"></i> Agregar al
                     Carrito</button>
             </article>
 
@@ -41,7 +45,8 @@
                 <img src="./imagenes/Millonarios.png" alt="Pulsera Equipo Millonarios">
                 <h3>Pulsera Equipo de fútbol</h3>
                 <p>Precio: <strong>$25.000</strong> </p>
-                <button class="btn-agregar" data-nombre="Pulsera Equipo futbol" data-precio="25000"><i class="bi bi-cart-plus"></i> Agregar al
+                <button class="btn-agregar" data-nombre="Pulsera Equipo futbol" data-precio="25000"><i
+                        class="bi bi-cart-plus"></i> Agregar al
                     Carrito</button>
             </article>
 
@@ -50,22 +55,32 @@
                 <img src="./imagenes/VirgenGuada.png" alt="Pulsera Virgen">
                 <h3>Pulsera Virgen de Guadalupe</h3>
                 <p>Precio: <strong>$28.000</strong> </p>
-                <button class="btn-agregar" data-nombre="Pulsera Virgen" data-precio="28000"><i class="bi bi-cart-plus"></i> Agregar al
+                <button class="btn-agregar" data-nombre="Pulsera Virgen" data-precio="28000"><i
+                        class="bi bi-cart-plus"></i> Agregar al
                     Carrito</button>
             </article>
 
         </section>
 
+        <!-- Carrito de compras contenedor -->
         <aside class="seccion-carrito">
-            <h2>Tu compra</h2>
-            <ul id="listaCarrito">
-            </ul>
-            <hr>
+            <div class="header">
+                <h2>Tu Carrito</h2>
+                <hr>
+            </div>
+            <div>
+            <p id="mensaje-vacio" style="display:block;"> Tu carrito está vacio</p>
+                <ul id="listaCarrito"></ul>
+               
+               
+            </div>
+
             <div class="contenedor-carrito">
                 <strong>Total: $</strong>
-                <span id="total">0</span>
+                <span id="total">0,00</span>
+            <button id="btn-vaciar"><i class="bi bi-trash3"></i> Vaciar Carrito</button>    
             </div>
-            <button id="btn-vaciar"><i class="bi bi-trash3"></i> Vaciar Carrito</button>
+            
 
         </aside>
 
